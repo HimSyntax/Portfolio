@@ -1,4 +1,4 @@
-Login Page (HTML & CSS) This is a simple login page created using HTML and CSS.
+Login Page (HTML & CSS) This is a simple login page created using HTML and CSS
 
 Live Demo
 
