@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu | Portfolio</title>
+    <style>
+        /* Import a clean, modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        /* CSS Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Matte Black & Olive Green Body Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Deep matte black */
+            color: #b3b3b3; /* Soft grey text for matte look */
+            line-height: 1.7;
+            padding: 2rem;
+            
+            /* Make it cover the whole tab and center content */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Portfolio Container */
+        .portfolio-container {
+            background-color: #1e1e1e; /* Slightly lighter matte black for contrast */
+            width: 100%;
+            max-width: 1000px; /* Expanded width to cover more of the screen */
+            padding: 4rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a; /* Subtle border, no drop shadow for a matte finish */
+        }
+
+        /* Typography */
+        h1 {
+            color: #dadada;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            color: #a3b18a; /* Matte Olive Green */
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888888;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #cccccc;
+        }
+
+        /* Profile Image Styling */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 4px solid #a3b18a; /* Olive green border */
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease;
+            filter: grayscale(20%); /* Slight desaturation to fit the matte vibe */
+        }
+
+        .profile-img:hover {
+            transform: translateY(-4px);
+            filter: grayscale(0%);
+        }
+
+        /* Buttons/Links - Matte Style */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: #344e41; /* Dark Olive Green */
+            color: #e0e0e0;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px; /* Soft square corners for flat UI */
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: 1px solid #3a5a40;
+        }
+
+        .btn:hover {
+            background-color: #588157; /* Lighter olive on hover */
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        /* Project Section Styling */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns for wider screens */
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: #242424; /* Flat dark background */
+            border: 1px solid #333333;
+            border-left: 4px solid #a3b18a; /* Olive green accent line */
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: #588157;
+            background-color: #2a2a2a;
+        }
+
+        .project-title {
+            color: #dadada;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Details Section */
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            color: #cccccc;
+        }
+
+        .contact-list a {
+            color: #a3b18a;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-list a:hover {
+            color: #dadada;
+            text-decoration: underline;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 1rem;
+                display: block; /* Remove flex centering on mobile so it scrolls naturally */
+            }
+
+            .portfolio-container {
+                padding: 2rem 1.5rem;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr; /* Stack projects vertically on small screens */
+            }
+
+            .button-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <h1>Himanshu Ranjan</h1>
+        <p class="subtitle">Computer Science Engineering Student & Web Developer</p>
+
+        <div class="profile-section">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGVbSoBRwF5Dg/profile-displayphoto-crop_800_800/B4DZrZB0xkJIAI-/0/1764577729107?e=1778112000&v=beta&t=BPJfwr38izCL85UZVKCC_67a_K-Bii7E2qtvgfzsBfs" alt="Himanshu" class="profile-img">
+            
+            <div class="button-group">
+                <a href="https://www.linkedin.com/in/btwhimanshu" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://github.com/hr2811" target="_blank" class="btn">GitHub</a>
+                <a href="btwhimanshuatwork@gmail.com" class="btn">Email Me</a>
+                <a href="https://drive.google.com/file/d/1eZC_tatS4y99aQyFegBfG9_hBeTf5BHR/view?usp=sharing" target="_blank" class="btn">Resume</a>
+            </div>
+        </div>
+
+        <h2>About Me</h2>
+        <p>Hi, I'm Himanshu, a passionate web developer with experience in creating responsive and user-friendly websites. I enjoy working on projects that challenge my skills and allow me to learn new technologies.</p>
+
+        <h2>Personal Summary</h2>
+        <p>I am a motivated and curious first-year Computer Science Engineering student with a strong passion for technology, problem-solving, and continuous learning. I enjoy exploring different areas of computer science including programming, web development, algorithms, and emerging technologies. My goal is to develop strong technical skills while applying creative thinking to build innovative solutions that solve real-world problems.</p>
+
+        <h2>Deployed Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3 class="project-title">Myntra E-Commerce Clone</h3>
+                <p>A responsive front-end clone of the Myntra online shopping website. Built using HTML and CSS, featuring a functional navigation bar, categorized shopping sections, and a dynamic product grid.</p>
+                <a href="Myntra.html" target="_blank" class="btn" style="width: 100%; text-align: center;">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <p>A fully responsive, custom-themed personal portfolio to showcase my frontend development skills, resume, and active projects. Built using semantic HTML5 and modern CSS techniques.</p>
+                <a href="MyPortfolio.html" target="_blank" class="btn" style="width: 100%; text-align: center;">View Project</a>
+            </div>
+        </div>
+
+        <h2>Contact Information</h2>
+        <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="btwhimanshuatwork@gmail.com">btwhimanshuatwork@gmail.com</a></li>
+            <li><strong>Phone:</strong> +91 9110153233</li>
+            <li><strong>Location:</strong> Ranchi, Jharkhand, India</li>
+        </ul>
+    </div>
+
+</body>
+</html>
